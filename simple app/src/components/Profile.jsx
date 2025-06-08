@@ -176,26 +176,6 @@ const Profile = () => {
             </Box>
           </Box>
 
-          {/* View Toggle */}
-          <Box sx={{ display: 'flex', justifyContent: 'flex-end', mb: 2 }}>
-            <Button
-              size="small"
-              startIcon={<GridView />}
-              onClick={() => setIsGridView(true)}
-              color={isGridView ? 'primary' : 'inherit'}
-            >
-              Grid
-            </Button>
-            <Button
-              size="small"
-              startIcon={<ViewStream />}
-              onClick={() => setIsGridView(false)}
-              color={!isGridView ? 'primary' : 'inherit'}
-            >
-              List
-            </Button>
-          </Box>
-
           {/* Posts Grid/List */}
           <Fade in={true}>
             <Grid container spacing={2}>

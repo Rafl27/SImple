@@ -16,19 +16,40 @@ const initialPosts = [
     content: 'Just had an amazing day at the beach! 🌊',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop',
     author: 'John Doe',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John',
+    date: '2024-03-20T10:30:00Z',
+    comments: [
+      {
+        id: 1,
+        author: 'Jane Smith',
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane',
+        content: 'Looks amazing! Which beach is this?',
+        date: '2024-03-20T11:00:00Z'
+      },
+      {
+        id: 2,
+        author: 'Mike Johnson',
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Mike',
+        content: 'Perfect weather for the beach!',
+        date: '2024-03-20T11:30:00Z'
+      }
+    ]
   },
   {
     id: 2,
     content: 'Working on some exciting new projects! 💻',
     author: 'Jane Smith',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane',
+    date: '2024-03-20T09:15:00Z',
+    comments: []
   },
   {
     id: 3,
     content: 'Just testing the app',
     author: 'Jane Bongs',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane',
+    date: '2024-03-20T08:00:00Z',
+    comments: []
   },
 ];
 
@@ -40,10 +61,24 @@ const MainContent = () => {
     setPosts([
       {
         id: posts.length + 1,
-        ...newPost
+        ...newPost,
+        date: new Date().toISOString(),
+        comments: []
       },
       ...posts
     ]);
+  };
+
+  const handleAddComment = (postId, newComment) => {
+    setPosts(posts.map(post => {
+      if (post.id === postId) {
+        return {
+          ...post,
+          comments: [...post.comments, newComment]
+        };
+      }
+      return post;
+    }));
   };
 
   return (
@@ -84,7 +119,7 @@ const MainContent = () => {
                       },
                     }}
                   >
-                    <Post post={post} />
+                    <Post post={post} onAddComment={handleAddComment} />
                   </Box>
                 ))}
               </>
