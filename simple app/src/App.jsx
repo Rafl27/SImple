@@ -8,6 +8,7 @@ import CreatePost from './components/CreatePost';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Messages from './components/Messages';
 
 const initialPosts = [
   {
@@ -92,6 +93,7 @@ const MainContent = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/messages" element={<Messages />} />
         </Routes>
       </Container>
       {location.pathname === '/' && <CreatePost onCreatePost={handleCreatePost} />}

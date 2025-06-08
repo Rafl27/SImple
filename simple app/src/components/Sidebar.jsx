@@ -1,5 +1,5 @@
 import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Divider } from '@mui/material';
-import { Person, Home, Login, PersonAdd } from '@mui/icons-material';
+import { Person, Home, Login, PersonAdd, Message } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -10,6 +10,7 @@ const Sidebar = () => {
 
   const menuItems = [
     { text: 'Feed', icon: <Home />, path: '/' },
+    { text: 'Messages', icon: <Message />, path: '/messages' },
     { text: 'Profile', icon: <Person />, path: '/profile' }
   ];
 
