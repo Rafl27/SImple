@@ -6,6 +6,8 @@ import Sidebar from './components/Sidebar';
 import Post from './components/Post';
 import CreatePost from './components/CreatePost';
 import Profile from './components/Profile';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 const initialPosts = [
   {
@@ -19,6 +21,12 @@ const initialPosts = [
     id: 2,
     content: 'Working on some exciting new projects! 💻',
     author: 'Jane Smith',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane'
+  },
+  {
+    id: 3,
+    content: 'Just testing the app',
+    author: 'Jane Bongs',
     avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane'
   },
 ];
@@ -82,6 +90,8 @@ const MainContent = () => {
             }
           />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Container>
       {location.pathname === '/' && <CreatePost onCreatePost={handleCreatePost} />}
