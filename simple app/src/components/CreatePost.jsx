@@ -29,7 +29,7 @@ const CreatePost = ({ onCreatePost }) => {
         content,
         image: imageUrl,
         author: 'Current User', // In a real app, this would come from auth
-        avatar: 'https://source.unsplash.com/random/40x40/?person',
+        avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=CurrentUser',
       });
       handleClose();
     }

@@ -11,15 +11,15 @@ const initialPosts = [
   {
     id: 1,
     content: 'Just had an amazing day at the beach! 🌊',
-    image: 'https://source.unsplash.com/random/800x400/?beach',
+    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop',
     author: 'John Doe',
-    avatar: 'https://source.unsplash.com/random/40x40/?person'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John'
   },
   {
     id: 2,
     content: 'Working on some exciting new projects! 💻',
     author: 'Jane Smith',
-    avatar: 'https://source.unsplash.com/random/40x40/?woman'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jane'
   },
 ];
 
