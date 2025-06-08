@@ -27,8 +27,8 @@ const Profile = () => {
     name: 'John Doe',
     username: '@johndoe',
     bio: 'Software Developer | Photography Enthusiast | Coffee Lover',
-    avatar: 'https://x.com/bloodexer/status/1474726314842238980',
-    coverPhoto: 'https://source.unsplash.com/random/1600x400/?landscape',
+    avatar: 'https://avatars.cloudflare.steamstatic.com/4f7bcfd19d6cfaec1b48a8d5b6512100e46b3059_full.jpg',
+    coverPhoto: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     stats: {
       posts: 42,
       followers: 1234,
@@ -39,7 +39,7 @@ const Profile = () => {
   const userPosts = [
     {
       id: 1,
-      image: 'https://source.unsplash.com/random/800x800/?nature',
+      image: 'https://plus.unsplash.com/premium_photo-1676218968741-8179dd7e533f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW91bnRhaW5zfGVufDB8fDB8fHww',
       content: 'Beautiful day in nature! 🌲 Just took a long hike through the mountains and the views were absolutely breathtaking. Nature has a way of making you feel so small yet so connected to everything.',
       likes: 156,
       comments: 23,

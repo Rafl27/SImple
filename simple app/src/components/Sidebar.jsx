@@ -26,6 +26,7 @@ const Sidebar = () => {
       sx={{
         backgroundColor: location.pathname === item.path ? 'action.selected' : 'transparent',
         transition: 'all 0.3s ease',
+        cursor: 'pointer',
         '&:hover': {
           backgroundColor: 'action.hover',
           transform: 'translateX(6px)',

@@ -66,7 +66,9 @@ const initialMessages = [
 ];
 
 const Messages = () => {
-  const [conversations, setConversations] = useState(initialConversations);
+  const [conversations,
+    //  setConversations
+    ] = useState(initialConversations);
   const [selectedConversation, setSelectedConversation] = useState(null);
   const [messages, setMessages] = useState(initialMessages);
   const [newMessage, setNewMessage] = useState('');
@@ -103,6 +105,7 @@ const Messages = () => {
                 onClick={() => setSelectedConversation(conversation)}
                 selected={selectedConversation?.id === conversation.id}
                 sx={{
+                  cursor: 'pointer',
                   '&:hover': {
                     backgroundColor: 'action.hover',
                   },
